@@ -1,27 +1,27 @@
 name: Sync to Hugging Face Hub
+
 on:
   push:
-    branches: [main] # Change this to master if your default branch is named master
+    branches: [main]
+
+permissions:
+  contents: read
+
 jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          token: ${{ secrets.SYNC_SECRET }} 
-          # 👈 Added this for your private repo
-          
+          token: ${{ secrets.SYNC_SECRET }}
+
       - name: Push to Hugging Face Hub
         uses: huggingface/hub-sync@v0.1.0
         with:
           github_repo_id: ${{ github.repository }}
           huggingface_repo_id: SubodhHF/legalai
-          hf_token: ${{ secrets.HF_SECRET}}
-          repo_type: space # 👈 Tells the action it is a Space web app
+          hf_token: ${{ secrets.HF_SECRET }}
+          repo_type: space
           space_sdk: docker
-
-
-
-          
- 
