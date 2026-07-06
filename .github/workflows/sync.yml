@@ -19,6 +19,7 @@ jobs:
           huggingface_repo_id: SubodhHF/legalai
           hf_token: ${{ secrets.HF_SECRET}}
           repo_type: space # 👈 Tells the action it is a Space web app
+          space_sdk: docker
 
 
 
