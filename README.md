@@ -1,3 +1,23 @@
+---
+title: My Private Open WebUI
+emoji: 🐳
+colorFrom: blue
+colorTo: green
+sdk: docker
+app_port: 8080
+---
+
+
+
+
+
+
+
+
+
+
+
+
 # Open WebUI 👋
 
 ![GitHub stars](https://img.shields.io/github/stars/open-webui/open-webui?style=social)
