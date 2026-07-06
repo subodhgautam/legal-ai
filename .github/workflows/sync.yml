@@ -18,6 +18,7 @@ jobs:
           github_repo_id: ${{ github.repository }}
           huggingface_repo_id: SubodhHF/legalai
           hf_token: ${{ secrets.HF_SECRET}}
+          repo_type: space # 👈 Tells the action it is a Space web app
 
 
 
