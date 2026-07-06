@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }} # 👈 Added this for your private repo
+          token: ${{ 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 }} # 👈 Added this for your private repo
 
       - name: Push to Hugging Face Hub
         uses: huggingface/hub-sync@v0.1.0
